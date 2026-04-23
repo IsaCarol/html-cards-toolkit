@@ -1,0 +1,16 @@
+```dax
+-- Retorna o CSS base dos cards
+_CSS.CARD.STYLE =
+"
+.outspace {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+.card {
+    flex:1;
+    border:1px solid #ccc;
+    border-radius:8px;
+    background:#fff;
+}
+"
