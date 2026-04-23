@@ -1,0 +1,26 @@
+# Exemplo de Uso Completo
+
+## 📌 Cenário
+
+Dashboard com KPIs principais:
+
+- Receita
+- Custo
+- Margem
+
+## 💻 Código
+
+```dax
+VAR _CSS = _CSS.CARD.STYLE(0)
+
+VAR _Cards =
+    _HTML.CARD(
+        {
+            ("Receita", [Receita], "R$ #,0", BLANK()),
+            ("Custo", [Custo], "R$ #,0", BLANK()),
+            ("Margem", [Margem %], "0.0%", BLANK())
+        }
+    )
+
+RETURN
+    _HTML.CSS.CARD.CONSTRUCTOR(_CSS, _Cards)
