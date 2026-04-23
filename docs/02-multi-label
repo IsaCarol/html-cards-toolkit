@@ -1,0 +1,35 @@
+
+
+# Card Multi Label
+
+```markdown
+# Card com Sub-Métricas
+
+## 📌 Descrição
+Permite adicionar informações complementares abaixo do valor principal.
+
+## 🧱 Estrutura
+
+- Título
+- Valor principal
+- Sub-métricas (ex: Ano anterior, Meta)
+
+## 💻 Exemplo
+
+```dax
+VAR _CSS = _CSS.CARD.STYLE(0)
+
+VAR _Callout = {
+    ("Receita", [Receita], "R$ #,0", BLANK())
+}
+
+VAR _Labels = {
+    ("Receita", "Ano Anterior", [Receita AA], "R$ #,0", BLANK()),
+    ("Receita", "Meta", [Meta], "R$ #,0", BLANK())
+}
+
+RETURN
+    _HTML.CSS.CARD.CONSTRUCTOR(
+        _CSS,
+        _HTML.CARD.MULTI_LABEL(_Callout, _Labels)
+    )
