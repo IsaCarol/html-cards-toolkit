@@ -1,10 +1,10 @@
-# 🧩 Card Simples
+# Card Simples
 
 Componente básico para exibição de métricas principais (callout), com suporte a título, valor formatado e tooltip opcional.
 
 ---
 
-## 📌 Descrição
+##  Descrição
 
 O **Card Simples** é utilizado para destacar KPIs principais em dashboards.
 
@@ -21,7 +21,7 @@ O **Card Simples** é utilizado para destacar KPIs principais em dashboards.
 
 ---
 
-## 🧱 Estrutura do Card
+## Estrutura do Card
 
 | Elemento        | Obrigatório | Descrição                          |
 |----------------|------------|------------------------------------|
@@ -32,7 +32,7 @@ O **Card Simples** é utilizado para destacar KPIs principais em dashboards.
 
 ---
 
-## 💻 Exemplo de uso
+##  Exemplo de uso
 
 ```dax
 VAR _CSS = _CSS.CARD.STYLE(0)
