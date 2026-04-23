@@ -1,0 +1,37 @@
+# Card com Variação (Badge)
+
+## 📌 Descrição
+Exibe variação percentual com indicador visual (▲/▼) e cor dinâmica.
+
+## 🧱 Estrutura
+
+- Título
+- Valor principal
+- Comparação
+- Badge de variação
+
+## 💻 Exemplo
+
+```dax
+VAR _CSS = _CSS.CARD.STYLE(0)
+
+VAR _Callout = {
+    ("Receita", [Receita], "R$ #,0", BLANK())
+}
+
+VAR _Labels = {
+    ("Receita", "Ano Ant.", [Receita AA], "R$ #,0", BLANK())
+}
+
+VAR _Var =
+    DIVIDE([Receita] - [Receita AA], [Receita AA])
+
+VAR _Details = {
+    ("Receita", "Ano Ant.", _Var, "0.0%", _Var)
+}
+
+RETURN
+    _HTML.CSS.CARD.CONSTRUCTOR(
+        _CSS,
+        _HTML.CARD.MULTI_LABEL.DETAIL(_Callout, _Labels, _Details)
+    )
