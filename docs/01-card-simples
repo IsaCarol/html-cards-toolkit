@@ -1,13 +1,36 @@
-# Card Simples
+# 🧩 Card Simples
+
+Componente básico para exibição de métricas principais (callout), com suporte a título, valor formatado e tooltip opcional.
+
+---
 
 ## 📌 Descrição
-Card básico com título e valor principal (callout). Pode conter tooltip opcional.
 
-## 🧱 Estrutura
+O **Card Simples** é utilizado para destacar KPIs principais em dashboards.
 
-- Título
-- Valor principal
-- Tooltip opcional
+✔ Ideal para:
+- Receita
+- Custo
+- Quantidade
+- Indicadores principais
+
+✔ Suporta:
+- Formatação de valor
+- Tooltip descritivo
+- Estilo reutilizável via CSS
+
+---
+
+## 🧱 Estrutura do Card
+
+| Elemento        | Obrigatório | Descrição                          |
+|----------------|------------|------------------------------------|
+| Título         | ✅ Sim     | Nome do indicador                  |
+| Valor          | ✅ Sim     | Medida DAX                         |
+| Formatação     | ✅ Sim     | Máscara de exibição                |
+| Tooltip        | ❌ Não     | Texto explicativo ao passar mouse |
+
+---
 
 ## 💻 Exemplo de uso
 
