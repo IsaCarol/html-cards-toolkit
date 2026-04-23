@@ -1,0 +1,26 @@
+# Card Simples
+
+## 📌 Descrição
+Card básico com título e valor principal (callout). Pode conter tooltip opcional.
+
+## 🧱 Estrutura
+
+- Título
+- Valor principal
+- Tooltip opcional
+
+## 💻 Exemplo de uso
+
+```dax
+VAR _CSS = _CSS.CARD.STYLE(0)
+
+VAR _Cards =
+    _HTML.CARD(
+        {
+            ("Receita Total", [Receita Total], "R$ #,0", "Receita do período"),
+            ("Custo Total", [Custo Total], "R$ #,0", BLANK())
+        }
+    )
+
+RETURN
+    _HTML.CSS.CARD.CONSTRUCTOR(_CSS, _Cards)
